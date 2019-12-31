@@ -13,3 +13,5 @@
 微服务组件 | Netflix | 待定
 缓存 | Redis | 待定
 数据源 | MySQL | 5.7
+任务调度 | Quartz | 待定
+授权认证 | Oauth2 | 待定
