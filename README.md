@@ -1,4 +1,5 @@
 # Qbea
+# Quickly Boot Enterprise Application
 致力于解决  Spring Cloud 企业级应用开发、测试、打包、部署框架
 
 应用类型 | 选型 | 版本
