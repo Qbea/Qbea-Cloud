@@ -12,3 +12,4 @@
 配置中心 | Apollo | 待定
 微服务组件 | Netflix | 待定
 缓存 | Redis | 待定
+数据源 | MySQL | 5.7
