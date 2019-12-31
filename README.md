@@ -5,5 +5,10 @@
 应用类型 | 选型 | 版本
 ---- | --- | ---
 框架架构 | Spring Cloud | Greenwich.SR2
+版本控制 | Git | 待定
+依赖控制 | Maven | 待定
+持续集成 | Jenkins | 待定
+应用部署 | Linux/Docker | CentOs 6
 配置中心 | Apollo | 待定
+微服务组件 | Netflix | 待定
 缓存 | Redis | 待定
