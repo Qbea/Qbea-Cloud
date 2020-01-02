@@ -11,6 +11,7 @@
 	<modules>
 		<module>cloud-manager</module>
 		<module>cloud-plugin</module>
+		<module>cloud-service</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,11 +28,19 @@
 
 		<commons-io.version>2.4</commons-io.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
+		<qbea-web-plugin.version>1.0.0-SNAPSHOT</qbea-web-plugin.version>
 
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>com.qbea</groupId>
+				<artifactId>web-plugin</artifactId>
+				<version>${qbea-web-plugin.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -45,6 +54,7 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
+
 		</dependencies>
 
 	</dependencyManagement>
