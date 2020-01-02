@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.qbea</groupId>
-            <artifactId>web-plugin</artifactId>
+            <artifactId>web-support</artifactId>
         </dependency>
     </dependencies>
 </project>

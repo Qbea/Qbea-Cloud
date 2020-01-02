@@ -10,7 +10,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>cloud-manager</module>
-		<module>cloud-plugin</module>
+		<module>cloud-support</module>
 		<module>cloud-service</module>
 	</modules>
 	<parent>
@@ -28,7 +28,7 @@
 
 		<commons-io.version>2.4</commons-io.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
-		<qbea-web-plugin.version>1.0.0-SNAPSHOT</qbea-web-plugin.version>
+		<qbea-web-support.version>1.0.0-SNAPSHOT</qbea-web-support.version>
 
 	</properties>
 
@@ -37,8 +37,8 @@
 
 			<dependency>
 				<groupId>com.qbea</groupId>
-				<artifactId>web-plugin</artifactId>
-				<version>${qbea-web-plugin.version}</version>
+				<artifactId>web-support</artifactId>
+				<version>${qbea-web-support.version}</version>
 			</dependency>
 
 			<dependency>
