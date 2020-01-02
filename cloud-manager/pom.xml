@@ -8,14 +8,8 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <!-- 是服务的base模块，提供公共的一些功能 -->
-    <artifactId>base</artifactId>
+
+    <artifactId>cloud-manager</artifactId>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
 </project>
