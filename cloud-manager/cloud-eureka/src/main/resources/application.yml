@@ -1,0 +1,25 @@
+#端口号
+server:
+  port: 9874
+#Eureka实例名，集群中根据这里相互识别
+eureka:
+#  server:
+#    enableSelfPreservation: false
+#    evictionIntervalTimerInMs: 4000
+  instance:
+    #心跳间隔时间 默认30秒
+    #leaseRenewalIntervalInSeconds: 2
+    #最后一次心跳时间后leaseExpirationDurationInSeconds秒就认为是下线了，默认是90秒
+    #leaseExpirationDurationInSeconds: 4
+    hostname: eureka
+#客户端
+  client:
+#是否开启注册服务，因为这里如果为true表示自己注册自己，而自己就是一个服务注册方，没必要自己注册自己
+    register-with-eureka: false
+#是否拉取服务列表，这里我只提供服务给别的服务。
+    fetch-registry: false
+#注册中心地址
+    service-url: 
+      defaultZone: http://localhost:${server.port}/eureka/
+logging:
+  config: classpath:logback.xml
