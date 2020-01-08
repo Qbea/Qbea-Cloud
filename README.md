@@ -16,3 +16,4 @@
 任务调度 | Quartz | 待定
 授权认证 | Oauth2 + Spring Security | 待定
 分布式事务 | Seata | 1.0
+前端框架 | vue+ElementUI | vue 2.0
