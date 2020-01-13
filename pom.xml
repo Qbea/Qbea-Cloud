@@ -29,7 +29,7 @@
 		<commons-io.version>2.4</commons-io.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
 		<qbea-web-support.version>1.0.0-SNAPSHOT</qbea-web-support.version>
-
+		<qbea-javautil-support.version>1.0.0-SNAPSHOT</qbea-javautil-support.version>
 	</properties>
 
 	<dependencyManagement>
@@ -39,6 +39,12 @@
 				<groupId>com.qbea</groupId>
 				<artifactId>web-support</artifactId>
 				<version>${qbea-web-support.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.qbea</groupId>
+				<artifactId>javautil-support</artifactId>
+				<version>${qbea-javautil-support.version}</version>
 			</dependency>
 
 			<dependency>
@@ -54,6 +60,8 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
+
+
 
 		</dependencies>
 
