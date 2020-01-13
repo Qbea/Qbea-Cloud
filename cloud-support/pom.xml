@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>java-util-support</module>
+        <module>javautil-support</module>
         <module>web-support</module>
     </modules>
     <artifactId>cloud-support</artifactId>
