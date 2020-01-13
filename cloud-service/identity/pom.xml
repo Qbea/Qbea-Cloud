@@ -10,12 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>identity</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>identity-model</module>
+        <module>identity-service</module>
+    </modules>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>com.qbea</groupId>
-            <artifactId>web-support</artifactId>
-        </dependency>
-    </dependencies>
 </project>

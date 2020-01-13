@@ -12,6 +12,7 @@
     <modules>
         <module>javautil-support</module>
         <module>web-support</module>
+        <module>druid-support</module>
     </modules>
     <artifactId>cloud-support</artifactId>
 

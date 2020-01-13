@@ -20,15 +20,19 @@
 	</parent>
 
 	<properties>
+		<!-- 外部依赖版本控制 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>
-
-
 		<commons-io.version>2.4</commons-io.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
+		<druidstarter.version>1.1.20</druidstarter.version>
+		<mysql-connector.version>5.1.44</mysql-connector.version>
+
+		<!-- 内部依赖版本控制 -->
 		<qbea-web-support.version>1.0.0-SNAPSHOT</qbea-web-support.version>
+		<druid-support.version>1.0.0-SNAPSHOT</druid-support.version>
 		<qbea-javautil-support.version>1.0.0-SNAPSHOT</qbea-javautil-support.version>
 	</properties>
 
@@ -48,6 +52,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>com.qbea</groupId>
+				<artifactId>druid-support</artifactId>
+				<version>${druid-support.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
@@ -61,6 +71,23 @@
 				<version>${commons-lang3.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druidstarter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druidstarter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector.version}</version>
+			</dependency>
 
 
 		</dependencies>
