@@ -37,20 +37,20 @@
 		</javaTypeResolver>
 
 		<javaModelGenerator targetPackage="com.qbea.${serviceName}.model.domain"
-			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/java">
+			targetProject="${platformAbsolutePath}/${serviceName}/p-${serviceName}/src/main/java">
 			<!--enableSubPackages:如果true，MBG会根据catalog和schema来生成子包。如果false就会直接用targetPackage属性。默认为false -->
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator targetPackage="mapper"
-			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/resources">
+			targetProject="${platformAbsolutePath}/${serviceName}/p-${serviceName}/src/main/resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--ANNOTATEDMAPPER:基于注解的Mapper接口，不会有对应的XML映射文件 MIXEDMAPPER:XML和注解的混合形式，(上面这种情况中的)SqlProvider注解方法会被XML替代。 
 			XMLMAPPER:所有的方法都在XML中，接口调用依赖XML文件。 -->
 		<javaClientGenerator type="XMLMAPPER" targetPackage="com.qbea.${serviceName}.model.mapper"
-			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/java" >
+			targetProject="${platformAbsolutePath}/${serviceName}/p-${serviceName}/src/main/java" >
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<table schema="qbea" tableName="platform_user">
