@@ -10,17 +10,17 @@
 	<classPathEntry location="${jdbc.path}" />
 	<!--context:生成一组对象的环境 ,id:必选，上下文id，用于在生成错误时提示;defaultModelType:定义了MBG如何生成实体类;targetRuntime: 
 		1，MyBatis3：默认的值，生成基于MyBatis3.x以上版本的内容，包括XXXBySample； 2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample； -->
-	<context id="gisquest-cloud" targetRuntime="MyBatis3" defaultModelType="flat">
+	<context id="qbea-generator" targetRuntime="MyBatis3" defaultModelType="flat">
 		<property name="javaFileEncoding" value="UTF-8" />
 		<!--plugin元素用来定义一个插件。插件用于扩展或修改通过MyBatis Generator (MBG)代码生成器生成的代码 -->
-        <plugin type="com.gisquest.cloud.mybatis.plugins.mysql.PaginationPlugin" />
+        <plugin type="com.qbea.dev.helper.mybatis.plugin.mysql.PaginationPlugin" />
 		<plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
 		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
 		<!--希望MBG生成的代码中可以包含注释信息，属性type需要实现org.mybatis.generator.api.CommentGenerator接口,有一个默认的构造方法 
 			接收默认的特殊值DEFAULT，会使用默认的实现类org.mybatis.generator.internal.DefaultCommentGenerator -->
-		<commentGenerator type="com.gisquest.cloud.mybatis.plugins.mysql.CommentPlugin">
+		<commentGenerator type="com.qbea.dev.helper.mybatis.plugin.mysql.CommentPlugin">
 			<!--suppressDate:阻止生成的注释包含时间戳，默认为false -->
 			<property name="suppressDate" value="true" />
 			<!--suppressAllComments:阻止生成注释，默认为false -->
@@ -36,24 +36,24 @@
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
-		<javaModelGenerator targetPackage="com.gisquest.cloud.${serviceName}.model.domain"
-			targetProject="${platformAbsolutePath}/platform-${serviceName}-service/platform-${serviceName}-model/src/main/java">
+		<javaModelGenerator targetPackage="com.qbea.${serviceName}.model.domain"
+			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/java">
 			<!--enableSubPackages:如果true，MBG会根据catalog和schema来生成子包。如果false就会直接用targetPackage属性。默认为false -->
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator targetPackage="mapper"
-			targetProject="${platformAbsolutePath}/platform-${serviceName}-service/platform-${serviceName}/src/main/resources">
+			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--ANNOTATEDMAPPER:基于注解的Mapper接口，不会有对应的XML映射文件 MIXEDMAPPER:XML和注解的混合形式，(上面这种情况中的)SqlProvider注解方法会被XML替代。 
 			XMLMAPPER:所有的方法都在XML中，接口调用依赖XML文件。 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.gisquest.cloud.${serviceName}.mapper"
-			targetProject="${platformAbsolutePath}/platform-${serviceName}-service/platform-${serviceName}/src/main/java" >
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.qbea.${serviceName}.model.mapper"
+			targetProject="${platformAbsolutePath}/${serviceName}/${serviceName}-model/src/main/java" >
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table schema="rules_engine" tableName="gz_gzxx">
+		<table schema="qbea" tableName="platform_user">
 			<property name="constructorBased" value="true" />
 			<property name="ignoreQualifiersAtRuntime" value="true" />
 			<generatedKey column="BSM" sqlStatement="SELECT LAST_INSERT_ID()" identity="true" />

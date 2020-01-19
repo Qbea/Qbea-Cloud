@@ -1,4 +1,4 @@
-package com.qbea.identity.dev.helper.mybatis;
+package com.qbea.dev.helper.mybatis;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;

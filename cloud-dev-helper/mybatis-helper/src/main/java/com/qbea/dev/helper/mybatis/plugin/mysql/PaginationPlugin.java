@@ -1,4 +1,4 @@
-package com.qbea.identity.dev.helper.mybatis.plugin.mysql;
+package com.qbea.dev.helper.mybatis.plugin.mysql;
 
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedColumn;
