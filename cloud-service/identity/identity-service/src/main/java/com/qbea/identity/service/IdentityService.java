@@ -1,4 +1,4 @@
-package com.qbea.service;
+package com.qbea.identity.service;
 
 import org.springframework.stereotype.Service;
 

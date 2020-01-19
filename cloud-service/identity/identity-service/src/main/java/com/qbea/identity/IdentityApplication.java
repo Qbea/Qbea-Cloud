@@ -1,4 +1,4 @@
-package com.qbea;
+package com.qbea.identity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

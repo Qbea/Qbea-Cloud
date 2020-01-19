@@ -1,4 +1,4 @@
-package com.qbea.controller;
+package com.qbea.identity.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
