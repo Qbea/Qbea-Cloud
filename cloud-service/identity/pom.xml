@@ -12,8 +12,8 @@
     <artifactId>identity</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>identity-model</module>
         <module>identity-service</module>
+        <module>identity-mybatis</module>
     </modules>
 
 </project>
