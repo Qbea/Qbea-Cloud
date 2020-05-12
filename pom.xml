@@ -31,6 +31,8 @@
 		<commons-lang3.version>3.3.2</commons-lang3.version>
 		<druidstarter.version>1.1.20</druidstarter.version>
 		<mysql-connector.version>5.1.44</mysql-connector.version>
+		<oracle-connector.version>10.2.0.4.0</oracle-connector.version>
+		<mybatis-starter.version>2.1.0</mybatis-starter.version>
 
 	</properties>
 
@@ -57,6 +59,24 @@
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql-connector.version}</version>
+			</dependency>
+			<!--oracle-->
+			<dependency>
+				<artifactId>ojdbc14</artifactId>
+				<groupId>com.oracle</groupId>
+				<version>${oracle-connector.version}</version>
+			</dependency>
+			<!-- druid 德鲁伊数据源-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druidstarter.version}</version>
+			</dependency>
+			<!-- mybatis starter -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis-starter.version}</version>
 			</dependency>
 		</dependencies>
 
