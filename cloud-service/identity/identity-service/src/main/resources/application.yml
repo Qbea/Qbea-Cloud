@@ -6,7 +6,7 @@ spring:
   application:
     name: identity-service
     nameText: 用户中心
-    version: 1.0.0-SNAPSHOT
+    version: ${revision}
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource

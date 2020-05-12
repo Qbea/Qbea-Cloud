@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qbea</groupId>
 	<artifactId>Qbea-Cloud</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>${revision}</version>
 	<packaging>pom</packaging>
 	<modules>
 		<module>cloud-manager</module>
@@ -21,6 +21,7 @@
 	</parent>
 
 	<properties>
+		<revision>1.0.0-SNAPSHOT</revision>
 		<!-- 外部依赖版本控制 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -31,33 +32,11 @@
 		<druidstarter.version>1.1.20</druidstarter.version>
 		<mysql-connector.version>5.1.44</mysql-connector.version>
 
-		<!-- 内部依赖版本控制 -->
-		<qbea-web-support.version>1.0.0-SNAPSHOT</qbea-web-support.version>
-		<druid-support.version>1.0.0-SNAPSHOT</druid-support.version>
-		<qbea-javautil-support.version>1.0.0-SNAPSHOT</qbea-javautil-support.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-
-			<dependency>
-				<groupId>com.qbea</groupId>
-				<artifactId>web-support</artifactId>
-				<version>${qbea-web-support.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.qbea</groupId>
-				<artifactId>javautil-support</artifactId>
-				<version>${qbea-javautil-support.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.qbea</groupId>
-				<artifactId>druid-support</artifactId>
-				<version>${druid-support.version}</version>
-			</dependency>
-
+			<!-- spring cloud 版本-->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -66,31 +45,19 @@
 				<scope>import</scope>
 			</dependency>
 
+			<!-- Apache 工具包 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid-spring-boot-starter</artifactId>
-				<version>${druidstarter.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>${druidstarter.version}</version>
-			</dependency>
-
+			<!--mysql 驱动-->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql-connector.version}</version>
 			</dependency>
-
-
 		</dependencies>
 
 	</dependencyManagement>

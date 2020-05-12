@@ -3,23 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>Qbea-Cloud</artifactId>
+        <artifactId>cloud-support</artifactId>
         <groupId>com.qbea</groupId>
         <version>${revision}</version>
     </parent>
-    <properties>
-
-    </properties>
-    <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-    <modules>
-        <module>identity</module>
-    </modules>
-    <artifactId>cloud-service</artifactId>
+    <modelVersion>4.0.0</modelVersion>
 
+    <artifactId>support-ex</artifactId>
 
-    <dependencyManagement>
-
-    </dependencyManagement>
 
 </project>
