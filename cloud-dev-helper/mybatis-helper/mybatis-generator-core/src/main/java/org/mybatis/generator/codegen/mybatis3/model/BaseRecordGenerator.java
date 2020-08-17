@@ -65,14 +65,20 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
         topLevelClass.addImportedType(new FullyQualifiedJavaType(
                 "java.util.Date"));
         commentGenerator.addJavaFileComment(topLevelClass);
-
-        FullyQualifiedJavaType superClass = getSuperClass();
+        // qbea
+        /*FullyQualifiedJavaType superClass = getSuperClass();
         if (superClass != null) {
             topLevelClass.setSuperClass(superClass);
             topLevelClass.addImportedType(superClass);
-        }
+        }*/
+        topLevelClass.addImportedType("javax.persistence.*");
+        topLevelClass.addImportedType("org.apache.ibatis.type.JdbcType");
+        topLevelClass.addImportedType("tk.mybatis.mapper.annotation.ColumnType");
         commentGenerator.addModelClassComment(topLevelClass, introspectedTable);
-
+        topLevelClass.addAnnotation("@Table(name = \""+introspectedTable.getTableConfiguration().getTableName()+"\")");
+        FullyQualifiedJavaType serializableType = new FullyQualifiedJavaType("java.io.Serializable");
+        topLevelClass.addSuperInterface(serializableType);
+        topLevelClass.addImportedType(serializableType);
         List<IntrospectedColumn> introspectedColumns = getColumnsInThisClass();
 
         if (introspectedTable.isConstructorBased()) {
@@ -95,6 +101,9 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
             }
 
             Field field = getJavaBeansField(introspectedColumn, context, introspectedTable);
+            // qbea
+            field.addAnnotation("@Column(name = \""+introspectedColumn.getActualColumnName()+"\")");
+            field.addAnnotation("@ColumnType(jdbcType = JdbcType."+introspectedColumn.getJdbcTypeName()+")");
             if (plugins.modelFieldGenerated(field, topLevelClass,
                     introspectedColumn, introspectedTable,
                     Plugin.ModelClassType.BASE_RECORD)) {

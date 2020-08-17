@@ -78,15 +78,23 @@ public class JavaMapperGenerator extends AbstractJavaClientGenerator {
             rootInterface = context.getJavaClientGeneratorConfiguration()
                     .getProperty(PropertyRegistry.ANY_ROOT_INTERFACE);
         }
-
-        if (stringHasValue(rootInterface)) {
+        // qbea  生成的mapper
+        /*if (stringHasValue(rootInterface)) {
             FullyQualifiedJavaType fqjt = new FullyQualifiedJavaType(
                     rootInterface);
             interfaze.addSuperInterface(fqjt);
             interfaze.addImportedType(fqjt);
-        }
+        }*/
+        FullyQualifiedJavaType modelType = new FullyQualifiedJavaType(
+                introspectedTable.getBaseRecordType());
+        FullyQualifiedJavaType defaultMapperClass = new FullyQualifiedJavaType("Mapper<"+modelType.getShortName()+">");
+        interfaze.addSuperInterface(defaultMapperClass);
+        interfaze.addImportedType(new FullyQualifiedJavaType("tk.mybatis.mapper.common.Mapper"));
+        interfaze.addImportedType(modelType);
 
-        addCountByExampleMethod(interfaze);
+
+        // qbea
+       /* addCountByExampleMethod(interfaze);
         addDeleteByExampleMethod(interfaze);
         addDeleteByPrimaryKeyMethod(interfaze);
         addInsertMethod(interfaze);
@@ -99,7 +107,7 @@ public class JavaMapperGenerator extends AbstractJavaClientGenerator {
         addUpdateByExampleWithoutBLOBsMethod(interfaze);
         addUpdateByPrimaryKeySelectiveMethod(interfaze);
         addUpdateByPrimaryKeyWithBLOBsMethod(interfaze);
-        addUpdateByPrimaryKeyWithoutBLOBsMethod(interfaze);
+        addUpdateByPrimaryKeyWithoutBLOBsMethod(interfaze);*/
 
         List<CompilationUnit> answer = new ArrayList<CompilationUnit>();
         if (context.getPlugins().clientGenerated(interfaze, null,

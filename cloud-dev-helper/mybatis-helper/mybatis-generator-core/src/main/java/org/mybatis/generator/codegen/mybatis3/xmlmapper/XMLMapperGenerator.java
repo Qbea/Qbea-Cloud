@@ -65,10 +65,10 @@ public class XMLMapperGenerator extends AbstractXmlGenerator {
                 namespace));
 
         context.getCommentGenerator().addRootComment(answer);
-
+        // qbea
         addResultMapWithoutBLOBsElement(answer);
         addResultMapWithBLOBsElement(answer);
-        addExampleWhereClauseElement(answer);
+/*        addExampleWhereClauseElement(answer);
         addMyBatis3UpdateByExampleWhereClauseElement(answer);
         addBaseColumnListElement(answer);
         addBlobColumnListElement(answer);
@@ -85,7 +85,7 @@ public class XMLMapperGenerator extends AbstractXmlGenerator {
         addUpdateByExampleWithoutBLOBsElement(answer);
         addUpdateByPrimaryKeySelectiveElement(answer);
         addUpdateByPrimaryKeyWithBLOBsElement(answer);
-        addUpdateByPrimaryKeyWithoutBLOBsElement(answer);
+        addUpdateByPrimaryKeyWithoutBLOBsElement(answer);*/
 
         return answer;
     }

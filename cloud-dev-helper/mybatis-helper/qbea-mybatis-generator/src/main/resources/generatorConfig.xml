@@ -39,30 +39,29 @@
 
 
 		<!--对象-->
-		<javaModelGenerator targetPackage="com.qbea.cloud.${serviceName}.mybatis.domain"
-			targetProject="${platformAbsolutePath}/cloud-service/${serviceName}/${serviceName}-mybatis/src/main/java">
+		<javaModelGenerator targetPackage="com.qbea.cloud.identity.mybatis.domain"
+			targetProject="${platformAbsolutePath}/cloud-service/identity/identity-mybatis/src/main/java">
 			<!--enableSubPackages:如果true，MBG会根据catalog和schema来生成子包。如果false就会直接用targetPackage属性。默认为false -->
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!--mapper xml-->
 		<sqlMapGenerator targetPackage="mapper"
-			targetProject="${platformAbsolutePath}/cloud-service/${serviceName}/${serviceName}-mybatis/src/main/resources">
+			targetProject="${platformAbsolutePath}/cloud-service/identity/identity-mybatis/src/main/resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--mapper  -->
 		<!--ANNOTATEDMAPPER:基于注解的Mapper接口，不会有对应的XML映射文件 MIXEDMAPPER:XML和注解的混合形式，(上面这种情况中的)SqlProvider注解方法会被XML替代。 
 			XMLMAPPER:所有的方法都在XML中，接口调用依赖XML文件。 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.qbea.cloud.${serviceName}.mybatis.mapper"
-			targetProject="${platformAbsolutePath}/cloud-service/${serviceName}/${serviceName}-mybatis/src/main/java" >
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.qbea.cloud.identity.mybatis.mapper"
+			targetProject="${platformAbsolutePath}/cloud-service/identity/identity-mybatis/src/main/java" >
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
 		<!-- gz_zyml:() -->
-		<table schema="rules_engine_yu" tableName="gz_zyml">
+		<table schema="qbea" tableName="user">
 			<property name="constructorBased" value="true" />
 			<property name="ignoreQualifiersAtRuntime" value="true" />
-			<generatedKey column="BSM" sqlStatement="SELECT LAST_INSERT_ID()" identity="true" />
 		</table>
 
 

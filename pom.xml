@@ -10,7 +10,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>cloud-manager</module>
-		<module>cloud-support</module>
 		<module>cloud-service</module>
         <module>cloud-dev-helper</module>
     </modules>
@@ -33,6 +32,8 @@
 		<mysql-connector.version>5.1.44</mysql-connector.version>
 		<oracle-connector.version>10.2.0.4.0</oracle-connector.version>
 		<mybatis-starter.version>2.1.0</mybatis-starter.version>
+		<tkMybatis.version>4.0.3</tkMybatis.version>
+		<mybatis.version>3.4.6</mybatis.version>
 
 	</properties>
 
@@ -77,6 +78,16 @@
 				<groupId>org.mybatis.spring.boot</groupId>
 				<artifactId>mybatis-spring-boot-starter</artifactId>
 				<version>${mybatis-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>tk.mybatis</groupId>
+				<artifactId>mapper</artifactId>
+				<version>${tkMybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.vertion}</version>
 			</dependency>
 		</dependencies>
 
