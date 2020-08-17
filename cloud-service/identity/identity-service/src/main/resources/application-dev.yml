@@ -1,0 +1,40 @@
+server:
+  port: 19063
+spring:
+  #springboot 2.0 开始需要显示配置，否则报错
+  main.allow-bean-definition-overriding: true
+  application:
+    name: identity-service
+    nameText: 用户中心
+    version: ${revision}
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/qbea?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&allowMultiQueries=true
+    username: root
+    password: root
+    druid:
+      initial-size: 2
+      min-idle: 5
+      max-active: 20
+      max-wait: 30000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 2000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 600000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # oracle为true,mysql建议false   #PSCache 相关
+      pool-prepared-statements: false
+      # oracle可设置100,mysql建议-1 #PSCache 相关
+      max-pool-prepared-statement-per-connection-size: -1
+      use-global-data-source-stat: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+  jackson:
+    time-zone: GMT+8

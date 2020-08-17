@@ -17,11 +17,6 @@
             <artifactId>support-pkg-base</artifactId>
             <version>${revision}</version>
         </dependency>
-        <dependency>
-            <groupId>com.qbea</groupId>
-            <artifactId>identity-model</artifactId>
-            <version>${revision}</version>
-        </dependency>
     </dependencies>
 
 </project>
