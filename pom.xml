@@ -5,14 +5,14 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qbea</groupId>
-	<artifactId>Qbea-Cloud</artifactId>
+	<artifactId>qbea</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>cloud-manager</module>
-		<module>cloud-service</module>
-        <module>cloud-dev-helper</module>
-		<module>cloud-common</module>
+		<module>qbea-manager</module>
+		<module>qbea-service</module>
+        <module>qbea-dev-helper</module>
+		<module>qbea-common</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
