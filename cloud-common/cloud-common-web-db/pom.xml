@@ -3,24 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud-service</artifactId>
+        <artifactId>cloud-common</artifactId>
         <groupId>com.qbea</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>identity</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>identity-service</module>
-        <module>identity-mybatis</module>
-    </modules>
+    <artifactId>cloud-common-web-db</artifactId>
+    <description>cloud-common-web模块的基础上扩展了对DB的支持，包括MySQL、Oracle、tkMybatis、pageHelper</description>
 
     <dependencies>
         <dependency>
             <groupId>com.qbea</groupId>
-            <artifactId>cloud-common-web-db</artifactId>
+            <artifactId>cloud-common-web</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
     </dependencies>
+
 </project>

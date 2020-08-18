@@ -12,7 +12,9 @@
     <artifactId>cloud-common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>cloud-web-base</module>
+
+        <module>cloud-common-web</module>
+        <module>cloud-common-web-db</module>
     </modules>
 
 </project>

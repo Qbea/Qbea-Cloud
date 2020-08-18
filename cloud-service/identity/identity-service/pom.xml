@@ -12,11 +12,6 @@
     <artifactId>identity-service</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.qbea</groupId>
-            <artifactId>cloud-web-base</artifactId>
-            <version>${revision}</version>
-        </dependency>
     </dependencies>
 
 </project>
