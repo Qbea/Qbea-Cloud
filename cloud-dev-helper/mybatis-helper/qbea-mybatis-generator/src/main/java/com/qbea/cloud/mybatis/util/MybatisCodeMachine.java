@@ -30,7 +30,6 @@ import java.util.Properties;
 
 /**
  * 用于生成<table><table/> 字符串，用于全库生成场景,使用前检查GeneratorConfig.properties是否配置正确
- * @author yujl2
  */
 public class MybatisCodeMachine {
     public static Connection conn = null;

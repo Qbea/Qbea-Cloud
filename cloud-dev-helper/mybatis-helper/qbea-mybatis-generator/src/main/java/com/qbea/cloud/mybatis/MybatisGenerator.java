@@ -16,7 +16,6 @@ import java.util.List;
     2.配置generatorConfig.xml中的table标签
     3.运行方法
 
-    @author yujl2
  */
 public class MybatisGenerator {
     public static void main(String[] args) throws Exception{

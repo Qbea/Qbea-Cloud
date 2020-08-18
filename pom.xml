@@ -12,7 +12,8 @@
 		<module>cloud-manager</module>
 		<module>cloud-service</module>
         <module>cloud-dev-helper</module>
-    </modules>
+		<module>cloud-common</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
