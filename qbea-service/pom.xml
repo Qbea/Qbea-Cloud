@@ -17,6 +17,7 @@
         <module>calc-engine</module>
         <module>decition-engine</module>
         <module>decition-platform</module>
+        <module>decition-flow</module>
         <module>rule-engine</module>
     </modules>
     <artifactId>qbea-service</artifactId>

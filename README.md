@@ -2,6 +2,8 @@
 # Quickly Boot Enterprise Application
 致力于解决  Spring Cloud 企业级应用开发、测试、打包、部署框架
 
+
+
 应用类型 | 选型 | 版本
 ---- | --- | ---
 框架架构 | Spring Cloud | Greenwich.SR2
@@ -20,3 +22,15 @@
 实时计算 | flink | 待定
 工作流 | activiti | 待定
 规则引擎 | aviator | 待定
+
+RoadMap:
+
+1.0.0 Release
+
+application | owner | feature
+---- | --- | ---
+identity(认证中心)  | RadishT | 用户体系管理（注册用户、匿名用户、菜单权限）
+qbea-ui(前端)  | hifangfang | FYI
+decition-platform | RadishT | 决策平台（指标、规则）
+decition-engine | RadishT | 规则引擎，aviator 
+decition-flow | RadishT | activiti工作流，集成规则引擎
