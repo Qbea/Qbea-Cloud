@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>qbea-dev-helper</artifactId>
+        <artifactId>rule-engine</artifactId>
         <groupId>com.qbea</groupId>
         <version>${revision}</version>
     </parent>
-    <modules>
-        <module>qbea-mybatis-generator</module>
-        <module>mybatis-generator-core</module>
-    </modules>
-    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>mybatis-helper</artifactId>
+
+    <artifactId>rule-engine-model-inner</artifactId>
 
 
 </project>
