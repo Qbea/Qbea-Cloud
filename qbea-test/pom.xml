@@ -8,14 +8,11 @@
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>qbea-common</artifactId>
     <packaging>pom</packaging>
     <modules>
-
-        <module>qbea-common-web</module>
-        <module>qbea-common-web-db</module>
-        <module>qbea-common-web-cache</module>
+        <module>calc-test-model</module>
     </modules>
+    <artifactId>qbea-test</artifactId>
+
 
 </project>

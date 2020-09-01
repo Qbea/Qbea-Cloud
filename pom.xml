@@ -13,7 +13,8 @@
 		<module>qbea-service</module>
         <module>qbea-dev-helper</module>
 		<module>qbea-common</module>
-	</modules>
+        <module>qbea-test</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -36,6 +37,7 @@
 		<tkMybatis.version>4.0.3</tkMybatis.version>
 		<mybatis.version>3.4.6</mybatis.version>
 		<aviator.version>5.1.2</aviator.version>
+		<fastjson.version>1.2.70</fastjson.version>
 
 	</properties>
 
@@ -90,10 +92,17 @@
 				<artifactId>mybatis</artifactId>
 				<version>${mybatis.version}</version>
 			</dependency>
+			<!-- adviator 表达式-->
 			<dependency>
 				<groupId>com.googlecode.aviator</groupId>
 				<artifactId>aviator</artifactId>
 				<version>${aviator.version}</version>
+			</dependency>
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
 			</dependency>
 		</dependencies>
 
