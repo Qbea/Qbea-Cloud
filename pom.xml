@@ -31,7 +31,7 @@
 		<commons-io.version>2.4</commons-io.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
 		<druidstarter.version>1.1.20</druidstarter.version>
-		<mysql-connector.version>5.1.44</mysql-connector.version>
+		<mysql-connector.version>8.0.16</mysql-connector.version>
 		<oracle-connector.version>10.2.0.4.0</oracle-connector.version>
 		<mybatis-starter.version>2.1.0</mybatis-starter.version>
 		<tkMybatis.version>4.0.3</tkMybatis.version>
