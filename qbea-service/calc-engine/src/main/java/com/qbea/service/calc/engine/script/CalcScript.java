@@ -11,7 +11,10 @@ public class CalcScript {
     private String calcModelName;
     private String objKey;
     private String timeKey;
+    /** 流计算方式 */
     private MergeAction mergeAction;
+    /** 指标名称 */
+    private String indiName;
 
     public CalcScript calcModelName(String calcModelName){
         this.calcModelName = calcModelName;
@@ -33,15 +36,16 @@ public class CalcScript {
         return this;
     }
 
-    public String getCalcModelName() {
-        return calcModelName;
+    public CalcScript indiName(String indiName){
+        this.indiName = indiName;
+        return this;
     }
 
-    public String getObjKey() {
-        return objKey;
+    public MergeAction getMergeAction() {
+        return mergeAction;
     }
 
-    public String getTimeKey() {
-        return timeKey;
+    public String getIndiName() {
+        return indiName;
     }
 }

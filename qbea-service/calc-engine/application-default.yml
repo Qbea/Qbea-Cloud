@@ -1,0 +1,11 @@
+server:
+  port: 19076
+spring:
+  application:
+    name: calc-engine
+    nameText: 计算引擎
+    version: ${revision}
+
+qbea.config:
+  calc:
+    persist.mode: local #流计算引擎的数据存储模式，local-本地内存存储

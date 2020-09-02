@@ -9,7 +9,7 @@ public class TestCalcScript extends CalcScript {
     public TestCalcScript(){
         this.calcModelName("com.alibaba.fastjson.JSONObject")
                 .objKey("id")
-                .timeKey("time")
-                .mergeAction(new CountOneResultAction());
+                .timeKey("createTime")
+                .mergeAction(new CountOneResultAction(2L));
     }
 }

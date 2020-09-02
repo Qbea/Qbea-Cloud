@@ -26,11 +26,13 @@ import java.util.jar.JarFile;
 public class CalcContext {
     Logger logger = LoggerFactory.getLogger(CalcContext.class);
     /**
-     * 指标名称 to 计算脚本   每笔流水会过一遍所有的脚本
+     * className  to 计算脚本List   每笔流水会过一遍所有的脚本
      */
-    public static final Map<String,CalcScript> CALC_SCRIPT_MAP = new HashMap<>();
-
-    public static final Map<String,BigDecimal> CALC_INDI_RESULT_MAP = new HashMap<>();
+    public static final Map<String,List<CalcScript>> CALC_SCRIPT_MAP = new HashMap<>();
+    /**
+     * 指标计算结果的map
+     */
+    public static final Map<String,Object> CALC_INDI_RESULT_MAP = new HashMap<>();
 
     private QbeaCustomClassloader extJarClassLoader;
 
@@ -41,7 +43,9 @@ public class CalcContext {
     @PostConstruct
     public void init()throws Exception{
         // 模拟订阅到一个脚本
-        CALC_SCRIPT_MAP.put("indi1",new TestCalcScript());
+        List<CalcScript> list = new ArrayList<>();
+        list.add(new TestCalcScript());
+        CALC_SCRIPT_MAP.put("com.qbea.test.calc.model.DealRecord",list);
         // 模拟订阅到一个模型包
         loadExtJar();
     }
